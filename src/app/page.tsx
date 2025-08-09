@@ -9,47 +9,42 @@ import {
 } from "@/components/ui/accordion";
 import Image from "next/image";
 import Link from "next/link";
-import img1 from "../../public/images/AI.jpg";
-import img2 from "../../public/images/Custom.jpg";
+import img1 from "../../public/images/Company Name Finder_Helps-BA41AD4p.jpg";
 
 import { cn } from "@/lib/utils";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { ChevronRight } from "lucide-react";
 import { AuroraText } from "@/components/magicui/aurora-text";
-import {
-    CardContent,
-    CardHeader,
-} from "@/components/ui/card";
+import { CardContent, CardHeader } from "@/components/ui/card";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { useTheme } from "next-themes";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
-
 const steps = [
     {
-        title: "Step 1: Enter a Query",
+        title: "Step 1: Enter Your Preferred Name",
         description:
-            "Start by typing your investment question like 'Analyze Apple Inc for DCF analysis with 5 years of annual data'.",
+            "Start by typing a potential company name you'd like to register. You can enter multiple suggestions if you want alternatives.",
     },
     {
-        title: "Step 2: Run Analysis",
+        title: "Step 2: Run the Name Check",
         description:
-            "Click the 'Run DCF Analysis' button. Our AI will fetch and process real-time financial data instantly.",
+            "Click the 'Check Availability' button. The system will instantly scan domain availability, MCA name records, and trademark databases.",
     },
     {
-        title: "Step 3: Review the Report",
+        title: "Step 3: Review Name Validity",
         description:
-            "Get a detailed report with financial metrics, DCF calculations, valuation, and expert-level insights—all in human-friendly language.",
+            "Get a full report showing domain availability (.com, .in), MCA compliance, similar/restricted names, and trademark conflicts.",
     },
     {
-        title: "Step 4: Make Informed Decisions",
+        title: "Step 4: Explore Smart Suggestions",
         description:
-            "Use the AI-generated intrinsic value, price comparison, and recommendations to decide whether to buy, hold, or sell.",
+            "If your original name isn't available, view AI-generated brandable name alternatives that are domain and MCA-compliant.",
     },
     {
-        title: "Step 5: Repeat Anytime",
+        title: "Step 5: Download One-Click Report",
         description:
-            "Analyze any company as often as you want. The assistant is live 24/7 with updated market data at your fingertips.",
+            "Save or share a neatly summarized report that includes all checks—domain, MCA, trademarks—for seamless incorporation.",
     },
 ];
 
@@ -59,8 +54,8 @@ export default function Home() {
     return (
         <main className=" mx-auto ">
             <VantaFog />
-            <section className=" mt-20 px-4 md:px-36 flex flex-col justify-center items-center  text-center">
-                <div className="group mb-5 relative  mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] ">
+            <section className="mt-20 px-4 md:px-36 flex flex-col justify-center items-center text-center">
+                <div className="group mb-5 relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
                     <span
                         className={cn(
                             "absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]"
@@ -74,39 +69,38 @@ export default function Home() {
                             WebkitClipPath: "padding-box",
                         }}
                     />
-                    🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
+                    🔍
+                    <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
                     <AnimatedGradientText className="text-sm font-medium">
-                        The #1 AI Assistant for Investors Who Want to Grow
-                        Without the Guesswork.
+                        AI-powered checks for MCA, domains, and trademarks — all
+                        in one click.
                     </AnimatedGradientText>
-                    <ChevronRight
-                        className="ml-1 size-4 stroke-neutral-500 transition-transform
-                        duration-300 ease-in-out group-hover:translate-x-0.5"
-                    />
+                    <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                 </div>
+
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-primary mb-6">
-                    Your 24/7 <AuroraText>AI-Powered</AuroraText> Investment
-                    Advisor — Live Stock Insights, Smart Decisions, Anytime,
-                    Anywhere.
+                    Your <AuroraText>AI Naming Partner</AuroraText> — Unique,
+                    Legal & Ready for Launch.
                 </h1>
 
                 <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
-                    Track stocks, analyze trends, and get expert-level advice —
-                    all in real-time, in English & हिंदी.
+                    Find company names that are domain-available, MCA-compliant,
+                    and free of trademark conflicts — all before branding
+                    begins.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <Link href={"/query"}>
+                    <Link href={"/find"}>
                         <ShimmerButton className="shadow-2xl">
                             <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                                Run a Query
+                                Check Name Availability
                             </span>
                         </ShimmerButton>
                     </Link>
-                    <Link href={"/analyse"}>
+                    <Link href={"/generate-names"}>
                         <ShimmerButton className="shadow-2xl">
                             <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                                Analyse
+                                Generate Brandable Names
                             </span>
                         </ShimmerButton>
                     </Link>
@@ -147,13 +141,13 @@ export default function Home() {
                 {/* Text Section */}
                 <div className="md:w-1/2 text-center md:text-left space-y-4">
                     <h2 className="text-3xl md:text-5xl font-bold text-primary">
-                        AI-Powered DCF Analyzer – Instantly reveal a company&apos;s
-                        true value with data-driven insights.
+                        AI-Powered Company Name Finder – Instantly check domain
+                        & MCA availability to launch your startup legally.
                     </h2>
-                    <Link href={"/query"}>
+                    <Link href={"/find"}>
                         <ShimmerButton className="shadow-2xl">
                             <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                                Run a Query
+                                Find a Name
                             </span>
                         </ShimmerButton>
                     </Link>
@@ -163,34 +157,8 @@ export default function Home() {
                 <div className="md:w-1/2 mt-10 md:mt-0">
                     <Image
                         src={img1}
-                        alt="Stock Analysis Illustration"
+                        alt="Company Name Finder Illustration"
                         className="w-full max-w-md mx-auto"
-                    />
-                </div>
-            </section>
-
-            <section className="flex flex-col md:flex-row items-center justify-between px-4 md:px-36 py-12">
-                {/* Text Section */}
-                <div className="md:w-1/2 text-center md:text-left space-y-4 order-2 md:order-1">
-                    <h2 className="text-3xl md:text-5xl font-bold text-primary">
-                        Custom AI DCF Analyzer – Instantly uncover true business
-                        value with data-driven insights.
-                    </h2>
-                    <Link href={"/analyse"}>
-                        <ShimmerButton className="shadow-2xl">
-                            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                                Analyse
-                            </span>
-                        </ShimmerButton>
-                    </Link>
-                </div>
-
-                {/* Image Section */}
-                <div className="md:w-1/2 mt-10 md:mt-0 order-1 md:order-2 flex justify-center">
-                    <Image
-                        src={img2}
-                        alt="Stock Analysis Illustration"
-                        className="w-full max-w-md"
                     />
                 </div>
             </section>
@@ -210,113 +178,104 @@ export default function Home() {
                         </AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-4 text-balance">
                             <p>
-                                This platform lets you perform an AI-powered
-                                Discounted Cash Flow (DCF) analysis for any
-                                public company. Simply enter a company name or
-                                stock symbol, and our system will generate a
-                                detailed report including revenue forecasts,
-                                cash flow projections, intrinsic value, and
-                                investment recommendations.
+                                This platform helps entrepreneurs find unique
+                                company names that are domain-available and
+                                legally compliant with India’s Ministry of
+                                Corporate Affairs (MCA) regulations.
                             </p>
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-2">
                         <AccordionTrigger>
-                            2. How accurate is the analysis?
+                            2. How does it check MCA compliance?
                         </AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-4 text-balance">
                             <p>
-                                The analysis is based on publicly available
-                                financial data and intelligent projections using
-                                modern DCF methodology. While it&apos;s a powerful
-                                estimation tool, results should be used as part
-                                of broader due diligence before making
-                                investment decisions.
+                                It cross-checks your name suggestions with MCA’s
+                                official name availability database and flags
+                                any conflicts with existing entities, reserved
+                                words, or ineligible patterns.
                             </p>
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-3">
                         <AccordionTrigger>
-                            3. Is it free to use?
+                            3. Can it check if a domain is available?
                         </AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-4 text-balance">
                             <p>
-                                Yes! You can use the DCF analysis features
-                                completely free of charge. We may introduce
-                                premium features in the future for enhanced
-                                forecasting, portfolio management, or data
-                                exporting.
+                                Yes. It verifies domain availability for common
+                                extensions like .com and .in, so you can secure
+                                a matching web presence instantly.
                             </p>
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-4">
                         <AccordionTrigger>
-                            4. What inputs are required from the user?
+                            4. Does it check for trademark conflicts?
                         </AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-4 text-balance">
                             <p>
-                                All you need to do is enter a simple prompt like
-                                &quot;Analyze Apple Inc for DCF analysis with 5 years
-                                of data&quot;. Our AI handles the rest — from
-                                fetching the data to generating the final
-                                valuation.
+                                Absolutely. The platform performs a preliminary
+                                trademark screening to identify potential legal
+                                conflicts before branding or incorporation.
                             </p>
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-5">
                         <AccordionTrigger>
-                            5. Which companies can I analyze?
+                            5. What if the name I want isn’t available?
                         </AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-4 text-balance">
                             <p>
-                                You can analyze any publicly traded company as
-                                long as their financial data is accessible.
-                                Popular queries include Apple, Tesla, Google,
-                                Microsoft, Netflix, and more.
+                                If your preferred name is taken, the system
+                                suggests similar, brandable alternatives that
+                                are domain and MCA eligible.
                             </p>
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-6">
                         <AccordionTrigger>
-                            6. Is my data secure?
+                            6. Who can use this platform?
                         </AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-4 text-balance">
                             <p>
-                                Absolutely. We do not store any personal data or
-                                query history. All analysis is performed
-                                securely and on-demand without tracking.
+                                It’s perfect for entrepreneurs starting new
+                                businesses, startup teams validating names, or
+                                agencies assisting clients with legal
+                                incorporation.
                             </p>
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-7">
                         <AccordionTrigger>
-                            7. Can I download the analysis report?
+                            7. Is it free to use?
                         </AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-4 text-balance">
                             <p>
-                                Currently, we display the results directly on
-                                the platform. In future updates, we plan to
-                                allow downloads in PDF or Excel format for
-                                professional use.
+                                The core features are currently free to use.
+                                Future updates may include premium options for
+                                faster processing, bulk checks, or enhanced
+                                reports.
                             </p>
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-8">
                         <AccordionTrigger>
-                            8. How long does it take to generate a report?
+                            8. Can I download a report of my name checks?
                         </AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-4 text-balance">
                             <p>
-                                Most reports are generated within 5–10 seconds.
-                                Complex queries or companies with extensive
-                                financial histories may take slightly longer.
+                                Yes. You get a one-click summary report that
+                                includes domain availability, MCA status, and
+                                trademark results for each name checked.
                             </p>
                         </AccordionContent>
                     </AccordionItem>
